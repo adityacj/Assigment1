@@ -59,27 +59,30 @@ d3.csv("USOpenFinals_2016.csv", row, function(error, csv_data){
 
 
     data_svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .style("stroke","steelblue")
+    .call(xAxis);
 
    
     data_svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis);
+    .attr("class", "y axis")
+    .style("stroke","steelblue")
+    .call(yAxis);
 
     data_svg.append("text")
     .attr("text-anchor", "middle")  
     .attr("transform", "translate(-50,360)rotate(-90)")  
     .text("Number of Aces Served")
-    .style("font-size", 15);
+    .style("stroke","steelblue")
+    .style("font-size", 20);
 
     data_svg.append("text")
     .attr("text-anchor", "middle")  
-    .attr("transform", "translate(900,750)")  
+    .attr("transform", "translate(900,748)")  
     .text("Year")
     .style("stroke","steelblue")
-    .style("font-size", 15);
+    .style("font-size", 20);
 
 
 	var data_g = data_svg.selectAll("circle")
